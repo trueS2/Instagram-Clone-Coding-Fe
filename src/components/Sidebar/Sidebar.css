@@ -1,0 +1,17 @@
+.sidebar-logo {
+    width: 103px;
+    height: auto;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 12px;
+}
+
+.sidebar-icon {
+    width: 24px;
+    height: 24px;
+    padding-right: 16px;
+}
