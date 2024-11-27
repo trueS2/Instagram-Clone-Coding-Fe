@@ -6,12 +6,12 @@ import explore from '../../assets/explore.png';
 import home from '../../assets/home.png';
 import love from '../../assets/love.png';
 import magnifier from '../../assets/magnifier.png';
-import plus from '../../assets/home.png';
+import plus from '../../assets/plus.png';
 import video from '../../assets/video.png';
 import profile from '../../assets/profile.png'
 
 
-const Sidebar = () => {
+const Sidebar = ({ setIsModalOpen }) => {
     return (
         <div className="sidebar">
             {/* 로고 */}
@@ -44,7 +44,7 @@ const Sidebar = () => {
                     <span className="sidebar-text">알림</span>
                 </div>
                 <div className="sidebar-item">
-                    <img src={plus} alt="Create" className="sidebar-icon" />
+                    <img src={plus} alt="Create" className="sidebar-icon" onClick={() => setIsModalOpen(true)} />
                     <span className="sidebar-text">만들기</span>
                 </div>
                 <div className="sidebar-item">
