@@ -9,8 +9,8 @@ const UploadModal = ({ isOpen, onClose }) => {
     const [caption, setCaption] = useState(""); // 게시글 캡션 상태
 
     const handleSubmit = () => {
-        if (!file || !caption) {
-            alert("이미지와 캡션을 모두 입력하세요!");
+        if (!file && !caption) {
+            alert("이미지나 캡션 중 하나는 입력해야 합니다!");
             return;
         }
 
@@ -34,7 +34,7 @@ const UploadModal = ({ isOpen, onClose }) => {
                 {/* 공유하기 버튼 */}
                 <SubmitBtn
                     onClick={handleSubmit}
-                    disabled={!file || !caption} // 파일과 캡션이 없으면 비활성화
+                    disabled={!file && !caption} // 파일과 캡션 둘 다 없으면 비활성화
                 />
             </div>
         </div>
