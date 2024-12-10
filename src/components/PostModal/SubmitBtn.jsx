@@ -1,5 +1,5 @@
 import React from "react";
-import "./SubmitBtn.css"; // 버튼 스타일을 위한 CSS 파일
+import "./SubmitBtn.css";
 
 const SubmitBtn = ({ onClick, disabled }) => {
     return (
