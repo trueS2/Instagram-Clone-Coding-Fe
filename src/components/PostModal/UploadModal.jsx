@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./PostModal.css"; // PostModal 스타일 임포트
-import ImageDropZone from "./ImageDropZone"; // 이미지 드롭존 컴포넌트
-import PostDetails from "./PostDetails"; // 게시글 세부 정보 컴포넌트
-import SubmitBtn from "./SubmitBtn"; // 공유하기 버튼 컴포넌트
+import "./PostModal.css";
+import ImageDropZone from "./ImageDropZone";
+import PostDetails from "./PostDetails";
+import SubmitBtn from "./SubmitBtn";
 
 const UploadModal = ({ isOpen, onClose }) => {
     const [file, setFile] = useState(null); // 업로드된 파일 상태
