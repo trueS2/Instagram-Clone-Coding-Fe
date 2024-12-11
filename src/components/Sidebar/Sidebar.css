@@ -8,8 +8,8 @@
 .sidebar-item {
     display: flex;
     align-items: center;
-    margin-top: 12px;
-    margin-left: 12px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     padding: 12px;
 }
 
