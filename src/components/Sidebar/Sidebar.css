@@ -8,7 +8,7 @@
 .sidebar-item {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
+    margin-top: 12px;
     margin-left: 12px;
     padding: 12px;
 }
@@ -24,4 +24,9 @@
     height: 1008px;
     padding: 8px 12px 20px 12px;
     border-right: 1px solid #ddd;
+}
+
+.sidebar-menu {
+    width: 220px;
+    height: 804px;
 }

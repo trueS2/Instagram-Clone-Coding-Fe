@@ -8,8 +8,9 @@ import love from '../../assets/love.png';
 import magnifier from '../../assets/magnifier.png';
 import plus from '../../assets/plus.png';
 import video from '../../assets/video.png';
-import profile from '../../assets/profile.png'
-
+import profile from '../../assets/profile.png';
+import menu from '../../assets/menu.png';
+import threads from '../../assets/threads.png';
 
 const Sidebar = ({ setIsModalOpen }) => {
     return (
@@ -50,6 +51,16 @@ const Sidebar = ({ setIsModalOpen }) => {
                 <div className="sidebar-item">
                     <img src={profile} alt="Profile" className="sidebar-icon" />
                     <span className="sidebar-text">프로필</span>
+                </div>
+            </div>
+            <div className="sidebar-bottom">
+                <div className="sidebar-item">
+                    <img src={threads} alt="Threads" className="sidebar-icon" />
+                    <span className="sidebar-text">Threads</span>
+                </div>
+                <div className="sidebar-item">
+                    <img src={menu} alt="Menu" className="sidebar-icon" />
+                    <span className="sidebar-text">더보기</span>
                 </div>
             </div>
         </div>
