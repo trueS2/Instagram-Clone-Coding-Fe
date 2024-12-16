@@ -13,14 +13,18 @@ function App() {
     {
       id: 1,
       user: "user1",
-      caption: "오늘의 멋진 풍경입니다!",
+      caption: "에바띵",
       imageUrl: "https://via.placeholder.com/600x400",
+      profileImage: "https://via.placeholder.com/50",
+      likes: 2217,
     },
     {
       id: 2,
       user: "user2",
-      caption: "강아지 산책 중 찍은 사진",
+      caption: "에바뚱띠",
       imageUrl: "https://via.placeholder.com/600x400",
+      profileImage: "https://via.placeholder.com/50",
+      likes: 1345
     },
   ]);
 
