@@ -1,12 +1,13 @@
+// UploadModal.jsx
 import React, { useState } from "react";
 import "./PostModal.css";
 import ImageDropZone from "./ImageDropZone";
 import PostDetails from "./PostDetails";
 import SubmitBtn from "./SubmitBtn";
 
-const UploadModal = ({ isOpen, onClose }) => {
-    const [file, setFile] = useState(null); // 업로드된 파일 상태
-    const [caption, setCaption] = useState(""); // 게시글 캡션 상태
+const UploadModal = ({ isOpen, onClose, addPost }) => {
+    const [file, setFile] = useState(null);
+    const [caption, setCaption] = useState("");
 
     const handleSubmit = () => {
         if (!file && !caption) {
@@ -14,28 +15,30 @@ const UploadModal = ({ isOpen, onClose }) => {
             return;
         }
 
-        // 서버에 데이터 전송 로직
-        console.log("업로드할 데이터:", { file, caption });
+        // 새로운 게시글 추가
+        const newPost = {
+            id: Date.now(),
+            user: "current_user", // 현재 사용자 이름
+            caption,
+            imageUrl: URL.createObjectURL(file), // 업로드한 이미지의 URL
+        };
+        addPost(newPost);
         alert("게시물이 업로드되었습니다!");
-        onClose(); // 모달 닫기
+        onClose();
     };
 
-    if (!isOpen) return null; // 모달이 열리지 않으면 렌더링하지 않음
+    if (!isOpen) return null;
 
     return (
         <div className="modal-overlay">
             <div className="modal-content">
-                <button className="close-btn" onClick={onClose}>X</button>
+                <button className="close-btn" onClick={onClose}>
+                    X
+                </button>
                 <h2>새 게시물 만들기</h2>
-                {/* 이미지 드롭존 */}
                 <ImageDropZone setFile={setFile} />
-                {/* 게시글 세부 정보 */}
                 <PostDetails setCaption={setCaption} />
-                {/* 공유하기 버튼 */}
-                <SubmitBtn
-                    onClick={handleSubmit}
-                    disabled={!file && !caption} // 파일과 캡션 둘 다 없으면 비활성화
-                />
+                <SubmitBtn onClick={handleSubmit} disabled={!file && !caption} />
             </div>
         </div>
     );
