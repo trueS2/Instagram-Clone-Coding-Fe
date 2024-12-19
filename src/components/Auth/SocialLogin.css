@@ -1,0 +1,25 @@
+.social-login-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.google-login-button {
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #4285f4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.kakao-login-button {
+    padding: 10px;
+    font-size: 1rem;
+    color: #3b1e1e;
+    background-color: #fee500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
